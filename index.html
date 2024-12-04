@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lashe To-do list</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="stats-container">
+        <div class="details">
+          <h1>Lahse Todo App</h1>
+          <p>keep it up</p>
+          <div id="progressbar">
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="stats-numbers">
+          <div id="numbers">0/0</div>
+        </div>
+      </div>
+      <form action="">
+        <input type="text" id="task-Input" placeholder="write your task" />
+        <button type="submit" id="newtask"  onclick="addTask()">+</button>
+      </form>
+        <ul class="task-List" id="task-List">
+        <!-- <li class="checked">Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li> -->
+      </ul>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  </body>
+</html>
+
+<!-- Overview of the Application
+The goal of the application is to create a simple task manager where:
+
+You can add tasks.
+You can mark tasks as complete or incomplete (check/uncheck them).
+You can delete tasks.
+The total number of tasks and completed tasks are tracked.
+A progress bar visually reflects the percentage of tasks completed.
+Data is saved to localStorage to ensure tasks persist across page reloads. -->
