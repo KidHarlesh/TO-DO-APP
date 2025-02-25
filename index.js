@@ -21,7 +21,7 @@ function addTask() {
     taskList.appendChild(li);
     // Create and append delete button
     let span = document.createElement("span");
-    span.style.backgroundImage = "url('/images/cancel-button.png')";
+    span.style.backgroundImage = "url('images/cancel-button.png')";
     span.style.backgroundSize = "cover";
     span.style.backgroundPosition = "center";
     span.style.width = "28px";
