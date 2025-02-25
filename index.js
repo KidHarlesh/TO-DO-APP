@@ -30,9 +30,6 @@ function addTask() {
     li.style.alignItems = "center";
     li.style.justifyContent = "space-between";
     li.appendChild(span);
-    
-
-    // Increment total tasks count
     totalTasks++;
     updateProgress();
     updateTaskCount();
@@ -50,12 +47,6 @@ function updateProgress() {
     progressBar.style.width = `${progress}%`;
   }
 }
-
-// function animation(){
-//   if (checkedTasks === totalTasks){
-//     blastconfetti();
-//   } 
-// }
 
 // Save the innerHTML of the task list to localStorage
 function saveData() {
@@ -80,7 +71,7 @@ function loadData() {
     // Ensure tasks are properly marked as checked
     Array.from(taskList.children).forEach((li) => {
       if (li.classList.contains("checked")) {
-        checkedTasks++;
+        li.classList.add("checked");
       }
     });
 
@@ -123,39 +114,3 @@ document.getElementById("newtask").addEventListener("click", function (e) {
   e.preventDefault();
 });
 
-
-// animation
- 
-
-// const blastconfetti =()=>{
-//   const defaults = {
-//     spread: 360,
-//     ticks: 50,
-//     gravity: 0,
-//     decay: 0.94,
-//     startVelocity: 30,
-//     shapes: ["star"],
-//     colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
-//   };
-
-//   function shoot() {
-//     confetti({
-//       ...defaults,
-//       particleCount: 40,
-//       scalar: 1.2,
-//       shapes: ["star"],
-//     });
-
-//     confetti({
-//       ...defaults,
-//       particleCount: 10,
-//       scalar: 0.75,
-//       shapes: ["circle"],
-//     });
-//   }
-
-//   setTimeout(shoot, 0);
-//   setTimeout(shoot, 100);
-//   setTimeout(shoot, 200);
-
-// }
